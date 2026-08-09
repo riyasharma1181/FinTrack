@@ -54,7 +54,7 @@ personal-expense-tracker/
 ├── requirements.txt
 └── .gitignore
 
-Main Modules
+##Main Modules
 
 1. Dashboard
 The dashboard provides a financial overview including:
