@@ -1,42 +1,199 @@
-# Personal Expense Tracker
+# FinTrack – Personal Finance & Budget Management System
 
-## Overview
-
-The Expense Tracker is a Flask-based web application designed to help users manage and visualize their expenses. Users can add purchases, view monthly expenses, analyze spending patterns through pie and line charts, and track all-time data. The application utilizes an SQLite database for data storage and dynamically updates visuals using Chart.js.
+FinTrack is a web-based personal finance management application developed using Python and Flask. It helps users manage their income and expenses, monitor their balance, set category-wise budgets, and analyze their spending patterns through interactive visualizations.
 
 ## Features
-- Add Purchases: Input expenses with details like date, business, amount, category, description, and an optional receipt photo.
-- View Recent Purchases: Display a list of the most recent expenses.
-- Monthly Overview: Visualize spending with dynamically generated charts (category breakdowns, totals by month).
-- All-Time Data: View cumulative spending trends and category distributions with line and pie charts.
-- Responsive Design: User-friendly UI, compatible across devices.
 
-## Technologies Used
+- Add and manage expenses
+- Record income
+- Calculate total income and total expenses
+- Automatically calculate available balance
+- Identify the top spending category
+- View recent transactions
+- Analyze monthly spending
+- Visualize spending using interactive charts
+- Set category-wise budgets
+- Compare budgeted amount with actual spending
+- Calculate remaining budget
+- Calculate budget utilization percentage
+- Display warnings when spending approaches or exceeds the budget limit
+- Store financial data using SQLite
 
-- Backend:
-  - Flask (Python)
-  - SQLite
-- Frontend:
-  - HTML5
-  - CSS3
-  - JavaScript
-  - Chart.js
-- Other Tools:
-  - Base64 for image handling
-  - Fetch API for asynchronous requests
+## Technology Stack
 
-## Future Enhancements
+- **Python**
+- **Flask**
+- **SQLite**
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Chart.js**
 
-- User authentication for multiple accounts.
-- Export data as CSV or PDF.
-- Advanced filtering and search options.
-- Support for recurring expenses.
-- Improved mobile responsiveness.
+## Project Structure
 
-## Authors Note
+```text
+personal-expense-tracker/
+│
+├── src/
+│   ├── app.py
+│   │
+│   ├── templates/
+│   │   ├── index.html
+│   │   ├── add.html
+│   │   ├── income.html
+│   │   ├── budget.html
+│   │   ├── monthly.html
+│   │   └── recent.html
+│   │
+│   └── static/
+│       ├── script.js
+│       ├── styles.css
+│       └── images/
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
 
-This project was initially made as a way to stay in practice over Winter break from College, but also from a specific (extremely minor) issue in my life. I track my expenses, as I find it interesting to look at how much I spend each month, and where that money goes.
+Main Modules
 
-The issue with existing (and free) budgeting apps that I have tried is that they are either filled with ads, give a limited amount of saves, or simply are unintuitive or confusing to use. By creating this, I hope to not only solve my issue of using such apps, but I can customize it exactly as I want, allowing for ease of use and access to any information I wish, at any time.
+1. Dashboard
+The dashboard provides a financial overview including:
 
-**Made by Travis Brown**
+Total Income
+Total Expenses
+Balance
+Top Spending Category
+Budget Overview
+Spending Analytics
+
+
+2. Expense Management
+Users can record expenses with:
+
+Date
+Business / merchant
+Amount
+Category
+Description
+Optional receipt image
+
+
+3. Income Management
+Users can record:
+
+Date
+Income source
+Amount
+Description
+
+The dashboard automatically calculates total income from the stored records.
+
+4. Budget Management
+Users can set a spending limit for individual categories.
+
+For each budget, FinTrack calculates:
+
+Budget Amount
+Actual Spending
+Remaining Budget
+Percentage Used
+
+The system also provides warnings when:
+
+Spending reaches 80% of the budget
+Spending exceeds the budget
+
+
+5. Spending Analytics
+FinTrack provides visual analysis of spending using Chart.js, including:
+
+Monthly spending trends
+Category-wise spending distribution
+Pie charts
+Spending summaries
+How It Works
+
+FinTrack uses Flask as the backend and SQLite as the database.
+
+User
+  ↓
+Web Interface
+  ↓
+Flask Backend
+  ↓
+SQLite Database
+  ↓
+Data Processing
+  ↓
+Dashboard & Analytics
+
+
+Balance Calculation
+Balance = Total Income - Total Expenses
+Budget Utilization
+Budget Used (%) = (Actual Spending / Budget Amount) × 100
+
+
+Installation
+1. Clone the Repository
+git clone https://github.com/riyasharma1181/FinTrack.git
+2. Open the Project
+cd FinTrack
+3. Open the Source Directory
+cd src
+4. Create a Virtual Environment
+python -m venv venv
+
+5. Activate the Virtual Environment
+
+For Windows PowerShell:
+
+.\venv\Scripts\Activate.ps1
+
+If PowerShell blocks script execution, you can run the application directly using:
+
+.\venv\Scripts\python.exe app.py
+6. Install Dependencies
+pip install -r ../requirements.txt
+7. Run the Application
+python app.py
+
+Open the application in your browser:
+
+http://127.0.0.1:5000
+
+
+
+Database
+
+FinTrack uses SQLite for local data storage.
+
+The database is automatically initialized when the application starts.
+
+The database contains tables for:
+
+Expenses
+Income
+Budgets
+
+The local database file is excluded from GitHub using .gitignore.
+
+Future Improvements
+
+Possible future improvements include:
+
+User authentication
+Export financial reports
+Recurring transactions
+Advanced spending trend analysis
+Improved mobile responsiveness
+Cloud database integration
+Deployment to a production server
+
+
+Author
+Riya Sharma
+
+GitHub: https://github.com/riyasharma1181
+
+

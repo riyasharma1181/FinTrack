@@ -172,3 +172,8 @@ cython_debug/
 
 # DB Data
 budget.db
+# FinTrack local database
+budget.db
+
+# Environment files
+.env

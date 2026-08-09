@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Income - FinTrack</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='styles.css') }}"
+    >
+</head>
+
+<body>
+
+    <header>
+        <h1>FinTrack</h1>
+
+        <nav>
+            <a href="{{ url_for('home') }}">Dashboard</a>
+            <a href="{{ url_for('add_page') }}">Add Expense</a>
+            <a href="{{ url_for('income_page') }}">Add Income</a>
+            <a href="{{ url_for('monthly_page') }}">Analytics</a>
+            <a href="{{ url_for('recent_page') }}">Transactions</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <h2>Add Income</h2>
+
+        <p>
+            Record your salary, scholarship, freelance income,
+            or other sources of money.
+        </p>
+
+
+        <form id="incomeForm">
+
+            <label for="incomeDate">Date</label>
+
+            <input
+                type="date"
+                id="incomeDate"
+                name="date"
+                required
+            >
+
+
+            <label for="incomeSource">Income Source</label>
+
+            <input
+                type="text"
+                id="incomeSource"
+                name="source"
+                placeholder="e.g. Salary, Scholarship, Freelance"
+                required
+            >
+
+
+            <label for="incomeAmount">Amount</label>
+
+            <input
+                type="number"
+                id="incomeAmount"
+                name="amount"
+                placeholder="Enter amount"
+                step="0.01"
+                min="0"
+                required
+            >
+
+
+            <label for="incomeDescription">Description</label>
+
+            <textarea
+                id="incomeDescription"
+                name="description"
+                placeholder="Optional description"
+                rows="4"
+            ></textarea>
+
+
+            <button type="submit">
+                Add Income
+            </button>
+
+        </form>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
