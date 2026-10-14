@@ -1,1 +1,20 @@
-Flask
+# FastAPI Web Framework & ASGI Server
+fastapi>=0.115.0,<1.0.0
+uvicorn[standard]>=0.30.0,<1.0.0
+
+# Database ORM & Drivers
+SQLAlchemy>=2.0.0,<3.0.0
+PyMySQL[rsa]>=1.1.0,<2.0.0
+psycopg[binary]>=3.2.0,<4.0.0
+
+# Data Validation & Email Schema Support
+pydantic>=2.7.0,<3.0.0
+email-validator>=2.1.0,<3.0.0
+
+# Authentication & Security
+bcrypt>=4.0.0,<6.0.0
+python-jose>=3.3.0,<4.0.0
+python-multipart>=0.0.9
+
+# Environment Configuration
+python-dotenv>=1.0.0,<2.0.0
