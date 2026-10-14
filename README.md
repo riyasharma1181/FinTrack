@@ -1,4 +1,30 @@
-# React + Vite
+# FinTrack — Personal Finance Management System
+
+FinTrack is a personal finance and budget management web application
+developed as a DBMS Project-Based Learning (PBL) project.
+
+## Features
+- User authentication
+- Income and expense management
+- Budget management
+- Financial summaries
+
+## Technologies Used
+- Frontend: React and Vite
+- Backend: Python
+- Database: Please verify the database configured in database.py
+
+## Project Structure
+- src/: Frontend source code
+- main.py: Backend application entry point
+- auth.py: Authentication-related code
+- database.py: Database configuration
+- models.py: Data models
+- schemas.py: Data schemas
+
+## Setup
+Refer to the project configuration files and dependencies
+for installation and execution instructions.# React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
